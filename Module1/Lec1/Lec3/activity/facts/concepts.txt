@@ -1,0 +1,39 @@
+Wcat commands
+
+cat f1.txt => Show the contents of file f1.txt
+cat f1.txt f2.txt => Show the contents of file f1.txt f2,txt together
+
+f1.txt output:
+f1.txt
+Hey i am f1
+
+
+
+Bye i am f1
+
+
+# Flags
+
+1. -s flag: Remove extra spaces from output
+output => 
+Hey i am f1
+
+Bye i am f1
+
+2. -b flag: Add line number on non empty lines
+output => 
+1.Hey i am f1
+
+
+
+2.Bye i am f1
+
+3. -n flag:Add line number on all lines including non empty lines and empty lines
+output => 
+1.Hey i am f1
+2.
+3.
+4.
+5.Bye i am f1
+
+-b and -n flag are exclusive so the flag which has a lower index will be considered !
