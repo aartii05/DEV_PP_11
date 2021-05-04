@@ -46,3 +46,38 @@ function applySFlag(f1KaData) {
 let removedSpacesString = applySFlag(f1KaData);
 console.log(removedSpacesString);
 
+// b flag - give line number to non empty lines
+function applyBFlag(f1KaData){
+  let count =1;
+  let splittedData = f1KaData.split("\r\n");
+  for(let i=0;i<splittedData.length;i++){
+    if(splittedData[i]!=''){
+      splittedData[i]=`${count} . ${splittedData[i]}`;
+      count++;
+    }
+  }
+  let bFlaggedString = splittedData.join('\r\n');
+  return bFlaggedString;
+
+}
+
+let bflaggedString = applyBFlag(f1KaData);
+//console.log(bflaggedString);
+
+//n flag- gives number to everything
+function applyNFlag(f1KaData){
+  let count =1;
+  let splittedData = f1KaData.split("\r\n");
+  for(let i=0;i<splittedData.length;i++){
+    
+      splittedData[i]=`${count} . ${splittedData[i]}`;
+      count++;
+    
+  }
+  let NflaggedString = splittedData.join('\n');
+  return NflaggedString;
+
+}
+
+console.log(applyNFlag(f1KaData));
+
