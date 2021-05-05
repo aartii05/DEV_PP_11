@@ -15,3 +15,7 @@ let myDoc=cheerio.load(htmlKadata);
 let h1kadata = myDoc("h1").text();
 console.log(h1kadata);
 
+// classes- dot
+// ids- #
+// ul a (gives all a tags under ul)
+// ul>a (descendants gives direct child of ul)
