@@ -12,6 +12,7 @@ request(matchLink , function(err , res , data){
 
 function processData(html){
     let myDocument = cheerio.load(html);
+    console.log(myDocument);
     let aTag = myDocument(".widget-items.cta-link a");
     // console.log(aTag);
     // console.log(    aTag.attr("href")    );
