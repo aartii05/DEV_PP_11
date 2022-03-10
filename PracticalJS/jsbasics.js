@@ -132,4 +132,4 @@ arr.splice(2,2);
 console.log(arr);
 
 // index of contains
-
+arr
