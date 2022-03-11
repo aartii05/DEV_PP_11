@@ -25,7 +25,14 @@ let fs=require("fs");
 
 // let doesPathExist=fs.existsSync("sample.txt");
 // console.log(doesPathExist);
-let detailsObj=fs.lstatSync(__dirname+ "\\filesystem.js");
-let ans=detailsObj.isFile();
-ans=detailsObj.isDirectory();
-console.log(ans);
+// let detailsObj=fs.lstatSync(__dirname+ "\\filesystem.js");
+// let ans=detailsObj.isFile();
+// ans=detailsObj.isDirectory();
+// console.log(ans);
+
+for(let i=0;i<=10;i++){
+    let dirpathToMake=`Lecture- ${i}`;
+    fs.mkdirSync(dirpathToMake);
+    fs.writeFileSync(dirpathToMake + "\\"+"readme.md",`# readme for ${dirpathToMake}`);
+    
+}
